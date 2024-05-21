@@ -393,4 +393,108 @@ $ git cherry-pick 465b7c2
  create mode 100644 test5.md
 ```
 
+### challenge 9
+
+```bash
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git log --graph --oneline
+* f96c347 (HEAD -> main, origin/main) Adding the Cherry pick Readme feature
+* 4eb8ff1 Implemented test 5
+* 5ca4839 Adding Readme
+* c36313e adding Readme file
+* 9d9dd61 adding Readme file
+* 33464e3 Adding Readme file
+* 39f6eef Adding Readme file
+* d88083c chore: Create second file and third
+* 060eee8 chore: Create initial file
+* 60559a8 first commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git log --graph --oneline --decorate
+* f96c347 (HEAD -> main, origin/main) Adding the Cherry pick Readme feature
+* 4eb8ff1 Implemented test 5
+* 5ca4839 Adding Readme
+* c36313e adding Readme file
+* 9d9dd61 adding Readme file
+* 33464e3 Adding Readme file
+* 39f6eef Adding Readme file
+* d88083c chore: Create second file and third
+* 060eee8 chore: Create initial file
+* 60559a8 first commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git log --graph --oneline --decorate --all
+* f96c347 (HEAD -> main, origin/main) Adding the Cherry pick Readme feature
+* 4eb8ff1 Implemented test 5
+| * 465b7c2 (ft/branch) Implemented test 5
+|/
+* 5ca4839 Adding Readme
+* c36313e adding Readme file
+* 9d9dd61 adding Readme file
+* 33464e3 Adding Readme file
+| *   f00bef6 (refs/stash) WIP on main: fd5c0d5 Unwanted commit
+| |\
+| | * e854120 index on main: fd5c0d5 Unwanted commit
+| |/
+| * fd5c0d5 Unwanted commit
+|/
+* 39f6eef Adding Readme file
+* d88083c chore: Create second file and third
+* 060eee8 chore: Create initial file
+* 60559a8 first commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git log --graph --decorate --all --pretty=oneline --abbrev-commit
+* f96c347 (HEAD -> main, origin/main) Adding the Cherry pick Readme feature
+* 4eb8ff1 Implemented test 5
+| * 465b7c2 (ft/branch) Implemented test 5
+|/
+* 5ca4839 Adding Readme
+* c36313e adding Readme file
+* 9d9dd61 adding Readme file
+* 33464e3 Adding Readme file
+| *   f00bef6 (refs/stash) WIP on main: fd5c0d5 Unwanted commit
+| |\
+| | * e854120 index on main: fd5c0d5 Unwanted commit
+| |/
+| * fd5c0d5 Unwanted commit
+|/
+* 39f6eef Adding Readme file
+* d88083c chore: Create second file and third
+* 060eee8 chore: Create initial file
+* 60559a8 first commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$
+```
+### challenge
+```bash
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git reflog
+f96c347 (HEAD -> main, origin/main) HEAD@{0}: commit: Adding the Cherry pick Readme feature
+4eb8ff1 HEAD@{1}: cherry-pick: Implemented test 5
+5ca4839 HEAD@{2}: checkout: moving from ft/branch to main
+465b7c2 (ft/branch) HEAD@{3}: commit: Implemented test 5
+5ca4839 HEAD@{4}: checkout: moving from main to ft/branch
+5ca4839 HEAD@{5}: rebase (abort): returning to refs/heads/main
+060eee8 HEAD@{6}: rebase: fast-forward
+60559a8 HEAD@{7}: rebase: fast-forward
+b7aa057 HEAD@{8}: rebase (start): checkout b7aa0579b931e9ad734851b85af1c91d20a1d8c5
+5ca4839 HEAD@{9}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{10}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{11}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{12}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{13}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{14}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{15}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{16}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{17}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{18}: rebase (abort): returning to refs/heads/main
+5ca4839 HEAD@{19}: commit: Adding Readme
+c36313e HEAD@{20}: commit: adding Readme file
+:
+```
+
 
