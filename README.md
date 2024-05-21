@@ -328,7 +328,69 @@ $ git push origin main --force
 ### challenge 7
 
 ```bash
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git rebase -i --root
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply 39f6eef... Adding Readme file
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+hint: Disable this message with "git config advice.mergeConflict false"
+Could not apply 39f6eef... Adding Readme file
 
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main|REBASE 3/8)
+
+```
+### challenge 8
+```bash
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (ft/branch)
+$ echo "This is test 5" > test5.md
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (ft/branch)
+$ git add test5.md
+warning: in the working copy of 'test5.md', LF will be replaced by CRLF the next time Git touches it
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (ft/branch)
+$ git commit -m "Implemented test 5"
+[ft/branch 465b7c2] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (ft/branch)
+$ git log --oneline
+465b7c2 (HEAD -> ft/branch) Implemented test 5
+5ca4839 (main) Adding Readme
+c36313e adding Readme file
+9d9dd61 adding Readme file
+33464e3 Adding Readme file
+39f6eef (origin/main) Adding Readme file
+d88083c chore: Create second file and third
+060eee8 chore: Create initial file
+60559a8 first commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (ft/branch)
+$ abcdef1 Implemented test 5
+bash: abcdef1: command not found
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (ft/branch)
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git cherry-pick 465b7c2
+[main 4eb8ff1] Implemented test 5
+ Date: Tue May 21 16:05:55 2024 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
 ```
 
 
