@@ -96,7 +96,7 @@ $ git add test4.md
 
 
 ```
-### challenge 2
+### challenge 2 and 3
 
 ```bash
 Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
@@ -123,4 +123,63 @@ Successfully rebased and updated refs/heads/main.
 
 Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
 $
+```
+
+### challenge 4
+
+```bash
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git log --oneline
+66f2b08 (HEAD -> main, origin/main) chore: Create initial file with second file
+a73272b chore: Create second file
+060eee8 chore: Create initial file
+60559a8 first commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git reset HEAD^ --soft
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git add path/to/third/file
+fatal: pathspec 'path/to/third/file' did not match any files
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git add test3.md
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git commit -m "Create Third File"
+[main 521e2bd] Create Third File
+ 3 files changed, 125 insertions(+)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git add test4.md
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git commit -m "Create fourth file"
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+
+nothing to commit, working tree clean
+
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git push origin main --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.46 KiB | 499.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/musi922/Gym-Git-Exercise-Solution.git
+ + 66f2b08...521e2bd main -> main (forced update)
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+```
+
+### challenge 5
+```bash
+
 ```
