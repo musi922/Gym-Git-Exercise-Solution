@@ -182,5 +182,53 @@ Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
 ### challenge 5
 ```bash
 
+```
+### challenge 6
+```bash
+$ touch unwanted.txt
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git add unwanted.txt
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git commit -m "Unwanted commit"
+[main fd5c0d5] Unwanted commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 unwanted.txt
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git rebase -i HEAD~2
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git stash
+Saved working directory and index state WIP on main: fd5c0d5 Unwanted commit
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git rebase -i HEAD~2
+Successfully rebased and updated refs/heads/main.
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git rebase --continue
+fatal: no rebase in progress
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git push origin main --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 852 bytes | 426.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/musi922/Gym-Git-Exercise-Solution.git
+   d88083c..39f6eef  main -> main
+
+Rich-kid@Richard MINGW64 ~/Desktop/thegymgit (main)
+$ git push origin main --force
+
 
 ```
+
+
